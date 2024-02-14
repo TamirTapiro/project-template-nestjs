@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Verification</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: 'Inter', Arial, sans-serif; /* Use Inter font */
+      line-height: 1.6;
+      padding: 20px;
+      background-color: black;
+      color: white;
+    }
+    .block {
+      background-color: #000000;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .button {
+      background-color: #6366F1;
+      border: none;
+      color: white;
+      padding: 10px 14px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease-in-out;
+      color: #ffffff !important;
+      margin-bottom: 16px;
+    }
+    .button:hover {
+      background-color: #4346D9;
+    }
+    .block p {
+      color: #ffffff;
+    }
+    .block h1 {
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+    }
+    .block h1 svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      fill: #6366F1;
+    }
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 600px) {
+      .block {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="block">
+    <h1>Email Verification</h1>
+    <p>
+      Hello There,
+    </p>
+    <p>
+      Please click the button below to verify your email address:
+    </p>
+    <p>
+      <a href="{{verificationLink}}" class="button">Verify Email</a>
+    </p>
+    <p>
+      By verifying your email, you'll be able to access all the features of our service. If you didn't request this verification, you can safely ignore this email.
+    </p>
+    <p>
+      If you have any questions or need assistance, our support team is ready to help you.
+    </p>
+    <p>
+      Thank you for choosing our service.
+    </p>
+  </div>
+</body>
+</html>
