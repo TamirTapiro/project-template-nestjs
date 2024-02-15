@@ -10,7 +10,7 @@ import { AuthEntity } from './auth.entity';
 import { AuthRepository } from './auth.repository';
 import { JWT_DEFAULT_SECRET } from 'src/shared/constants';
 import { EmailModule } from 'src/email/email.module';
-import { User } from 'src/modules/user/entities/user.entity';
+import { User } from 'src/modules/user/user.entity';
 import { UserModule } from 'src/modules/user/user.module';
 
 @Module({

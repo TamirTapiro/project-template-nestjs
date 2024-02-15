@@ -1,7 +1,7 @@
 // user.repository.ts
 import { DataSource, FindOptionsSelect, Repository } from 'typeorm';
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { User } from './entities/user.entity';
+import { User } from './user.entity';
 
 @Injectable()
 export class UserRepository extends Repository<User> {

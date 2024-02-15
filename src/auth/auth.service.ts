@@ -19,7 +19,7 @@ import {
 } from 'src/shared/constants';
 import { ChangePasswordDto, ResetPasswordDto } from './auth.dto';
 import { EmailService } from 'src/email/email.service';
-import { User } from 'src/modules/user/entities/user.entity';
+import { User } from 'src/modules/user/user.entity';
 import { UserService } from 'src/modules/user/user.service';
 import { CreateUserDto } from 'src/modules/user/dto/create-user.dto';
 

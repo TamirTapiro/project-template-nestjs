@@ -42,7 +42,7 @@ docker-compose up -d
 3. Generate migration and Run it:
 
 ```bash
-npm run migration-generate && npm run migration-run
+npm run migrate
 ```
 
 ## Usage

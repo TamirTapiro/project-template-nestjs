@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { DeepPartial, FindOptionsSelect } from 'typeorm';
 import { UserRepository } from './user.repository';
-import { User } from './entities/user.entity';
+import { User } from './user.entity';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { convertArrayToObject } from 'src/shared/utils/utils';
@@ -24,6 +24,14 @@ export class UserService {
     }
     return user;
   }
+
+  async findUsersWithProjection(keys: string[]): Promise<Partial<User>[]> {
+    const queryBuilder = this.userRepository.createQueryBuilder('user');
+    keys.forEach((key) => {
+      queryBuilder.addSelect(`user.${key}`);
+    });
+    return queryBuilder.getMany();
+  } 
 
   async createUser(createUserDto: CreateUserDto): Promise<User> {
     const user = this.userRepository.create({
